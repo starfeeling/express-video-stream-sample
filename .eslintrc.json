@@ -1,0 +1,27 @@
+{
+    "parser": "babel-eslint",
+    "env": {
+        "node": true
+    },
+    "extends": "airbnb-base",
+    "rules": {
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "semi": [
+            2,
+            "never"
+        ],
+        "arrow-body-style": [
+            "error",
+            "always"
+        ],
+        "comma-dangle": [
+            "error",
+            "never"
+        ],
+        "no-console": 1,
+        "no-tabs": 0
+    }
+}
