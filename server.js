@@ -10,12 +10,11 @@ app.get('/', (req, res) => {
 	res.sendFile(path.join(`${__dirname}/index.htm`))
 })
 
-
 app.get('/video', (req, res) => {
 	const videoPath = 'videos/sample.mp4'
 	const stat = fs.statSync(videoPath)
 	const fileSize = stat.size
-	const range = req.headers.range
+	const range = req.headers.range || null
 
 	if (range) {
 		const parts = range.replace(/bytes=/, '').split('-')
