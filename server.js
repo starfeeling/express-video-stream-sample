@@ -40,7 +40,7 @@ app.get('/video', (req, res) => {
 			'Content-Type': 'video/mp4'
 		}
 		res.writeHead(200, head)
-		fs.createReadStream(path).pipe(res)
+		fs.createReadStream(videoPath).pipe(res)
 	}
 })
 
